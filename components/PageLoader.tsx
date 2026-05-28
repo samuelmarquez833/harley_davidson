@@ -8,7 +8,6 @@ export default function PageLoader() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    let start = 0;
     const duration = 2200;
     const startTime = performance.now();
 

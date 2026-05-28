@@ -109,6 +109,7 @@ export default function ThreeBackground({ accentHex }: ThreeBackgroundProps) {
     };
     window.addEventListener("resize", onResize);
 
+    const mountNode = mountRef.current;
     return () => {
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(rafRef.current);
@@ -116,8 +117,8 @@ export default function ThreeBackground({ accentHex }: ThreeBackgroundProps) {
       geo.dispose();
       mat.dispose();
       sprite.dispose();
-      if (mountRef.current && renderer.domElement.parentNode === mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (mountNode && renderer.domElement.parentNode === mountNode) {
+        mountNode.removeChild(renderer.domElement);
       }
     };
   }, []);
