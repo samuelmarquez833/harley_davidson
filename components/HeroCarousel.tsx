@@ -21,7 +21,6 @@ const accentColors: Record<string, string> = {
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const imgKey = useRef(0);
 
   useEffect(() => {
     setMounted(true);

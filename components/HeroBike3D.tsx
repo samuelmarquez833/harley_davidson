@@ -160,7 +160,7 @@ function BikeModel({
       chromeMat.dispose();
       tireMat.dispose();
     };
-  }, [scene, camera]);
+  }, [scene, camera, flipY]);
 
   useFrame(() => {
     if (groupRef.current) {
